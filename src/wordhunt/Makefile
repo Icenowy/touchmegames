@@ -14,7 +14,7 @@ GAME_NAME=wordhunt
 
 all: $(GAME_NAME).h events.o interface.o support.o whxmlparser.o lib
 
-lib:
+lib: events.o interface.o support.o
 	ar crv lib$(GAME_NAME).a events.o interface.o support.o whxmlparser/whxmlparser.o
 	ranlib lib$(GAME_NAME).a
 

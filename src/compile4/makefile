@@ -10,7 +10,7 @@ GAME_NAME=compile4
 
 all: $(GAME_NAME).h events.o interface.o support.o lib
 
-lib:
+lib: events.o interface.o support.o
 	ar crv lib$(GAME_NAME).a events.o interface.o support.o
 	ranlib lib$(GAME_NAME).a
 

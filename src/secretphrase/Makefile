@@ -13,7 +13,7 @@ GAME_NAME=secretphrase
 
 all: $(GAME_NAME).h events.o interface.o support.o xmlparser.o lib
 
-lib:
+lib: events.o interface.o support.o
 	ar crv lib$(GAME_NAME).a events.o interface.o support.o xmlparser/xmlparser.o
 	ranlib lib$(GAME_NAME).a
 

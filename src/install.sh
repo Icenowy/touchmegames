@@ -18,7 +18,8 @@ for i in ${GAMES}; do \
 done
 # (cd images; make install;);
 cd images; ./install.sh ${INSTALL_DIR}; cd ..
-cp touchmegames ${PREFIX}/bin
+test -d ${PREFIX}/bin || mkdir -p ${PREFIX}/bin
+cp touchmegames ${PREFIX}/bin/
 test -d ${PREFIX}/share/applications || mkdir -p ${PREFIX}/share/applications
 
 head -n 12 touchmegames.desktop > ${PREFIX}/share/applications/touchmegames.desktop

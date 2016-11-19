@@ -15,7 +15,8 @@ INC=-Ilib -Iinclude -I. -Igorillathrilla -Ivideopoker -Iflogthedolphin -Iwordhun
 	 -Icompile4 -Ifoxyboxy -Isecretphrase -Iconsume21 -Isudoku -Idropzone -Ifotoseek -Inonogram -Ifortresscrackers \
 	 -Imemory
 
-PREFIX=/usr
+PREFIX?=/usr
+DESTDIR?=
 
 #-Idart01 -IdartCountUp -Idarttictactoe -Idartlowball -Idartcountdown  -Idartcricket -Idartcricket10
 INSTALL_DIR=${PREFIX}/share/touchmegames/
@@ -58,7 +59,7 @@ lib:
 	(cd lib; ${MAKE} "INSTALL_DIR=${INSTALL_DIR}")
 
 install:
-	INSTALL_DIR=${INSTALL_DIR} PREFIX=${PREFIX} ./install.sh
+	INSTALL_DIR=${DESTDIR}${INSTALL_DIR} PREFIX=${DESTDIR}${PREFIX} ./install.sh
 #	if [ ! -e touchmegames ]; then make; fi
 #	if [ ! -e ${INSTALL_DIR} ]; \
 #		then mkdir ${INSTALL_DIR}; \
@@ -73,7 +74,7 @@ install:
 #	cp -f touchmegames.desktop /usr/share/applnk/Games
 
 uninstall:
-	INSTALL_DIR=${INSTALL_DIR} PREFIX=${PREFIX} ./uninstall.sh
+	INSTALL_DIR=${DESTDIR}${INSTALL_DIR} PREFIX=${DESTDIR}${PREFIX} ./uninstall.sh
 #	rm -rf ${INSTALL_DIR}
 #	rm -f /usr/bin/touchmegames
 #	rm -f /usr/share/applnk/Games/touchmegames.desktop

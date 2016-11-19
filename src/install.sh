@@ -21,6 +21,8 @@ cd images; ./install.sh ${INSTALL_DIR}; cd ..
 test -d ${PREFIX}/bin || mkdir -p ${PREFIX}/bin
 cp touchmegames ${PREFIX}/bin/
 test -d ${PREFIX}/share/applications || mkdir -p ${PREFIX}/share/applications
+test -d ${PREFIX}/share/pixmaps || mkdir -p ${PREFIX}/share/pixmaps
+cp images/tmgicon.png ${PREFIX}/share/pixmaps/touchmegames.png
 
 head -n 12 touchmegames.desktop > ${PREFIX}/share/applications/touchmegames.desktop
-echo Icon=${INSTALL_DIR}images/tmgicon.png >> ${PREFIX}/share/applications/touchmegames.desktop
+echo Icon=touchmegames >> ${PREFIX}/share/applications/touchmegames.desktop

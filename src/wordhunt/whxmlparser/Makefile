@@ -13,11 +13,11 @@ all: whxmlparser.o
 debug: dwhxmlparser.o
 
 whxmlparser.o: whxmlparser.cpp whxmlparser.h
-	g++ whxmlparser.cpp $(XML_CFLAGS) $(GTK_CFLAGS) $(INC) -c
+	g++ whxmlparser.cpp $(XML_CFLAGS) $(GTK_CFLAGS) $(GENERAL_CFLAGS) $(INC) -c
 	
 	
 dwhxmlparser.o: whxmlparser.cpp whxmlparser.h
-	g++ whxmlparser.cpp $(XML_CFLAGS) $(GTK_CFLAGS) $(INC) -c -g
+	g++ whxmlparser.cpp $(XML_CFLAGS) $(GTK_CFLAGS) $(GENERAL_CFLAGS) $(INC) -c -g
 	
 clean:
 	rm -rf *.o *~ 

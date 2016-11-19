@@ -13,13 +13,13 @@ all: xmlparser.o xmltest.o
 debug: dxmlparser.o
 
 xmlparser.o: xmlparser.cpp xmlparser.h
-	g++ xmlparser.cpp $(XML_CFLAGS) $(GTK_CFLAGS) $(INC) -c
+	g++ xmlparser.cpp $(XML_CFLAGS) $(GTK_CFLAGS) $(GENERAL_CFLAGS) $(INC) -c
 	
 xmltest.o: xmltest.cpp
-	g++ xmltest.cpp $(XML_CFLAGS) $(GTK_CFLAGS) $(INC) -c
+	g++ xmltest.cpp $(XML_CFLAGS) $(GTK_CFLAGS) $(GENERAL_CFLAGS) $(INC) -c
 	
 dxmlparser.o: xmlparser.cpp xmlparser.h
-	g++ xmlparser.cpp $(XML_CFLAGS) $(GTK_CFLAGS) $(INC) -c -g
+	g++ xmlparser.cpp $(XML_CFLAGS) $(GTK_CFLAGS) $(GENERAL_CFLAGS) $(INC) -c -g
 	
 clean:
 	rm -rf *.o *~ xmltest 

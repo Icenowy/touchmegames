@@ -1,28 +1,25 @@
 #!/bin/bash
 # Main install script for TouchMe Games
 
-INSTALL_DIR_STR=`grep INSTALL_DIR lib/config.h | head -n 1 | awk '{ print $3 }'`
-INSTALL_DIR=${INSTALL_DIR_STR%\"*}
-
 GAMES=`echo */`
 
 if [ ! -e touchmegames ]; then make; fi
-test -d ${INSTALL_DIR:1} || mkdir -p ${INSTALL_DIR:1}
+test -d ${INSTALL_DIR} || mkdir -p ${INSTALL_DIR}
 
-echo installDir: ${INSTALL_DIR:1}
+echo installDir: ${INSTALL_DIR}
 
 for i in ${GAMES}; do \
     if [ "$i" != "CVS/" ]; then
         echo Installing: ${i%\/}; \
-        cd $i; ../installgame.sh ${INSTALL_DIR:1} ${i%\/};
-        test -e install.sh && ./install.sh ${INSTALL_DIR:1} ${i%\/} > /dev/null
+        cd $i; ../installgame.sh ${INSTALL_DIR} ${i%\/};
+        test -e install.sh && ./install.sh ${INSTALL_DIR} ${i%\/} > /dev/null
         cd ..; \
     fi
 done
 # (cd images; make install;);
-cd images; ./install.sh ${INSTALL_DIR:1}; cd ..
-cp touchmegames /usr/bin
-test -d /usr/share/applnk/Games || mkdir -p /usr/share/applnk/Games
+cd images; ./install.sh ${INSTALL_DIR}; cd ..
+cp touchmegames ${PREFIX}/bin
+test -d ${PREFIX}/share/applications || mkdir -p ${PREFIX}/share/applications
 
-head -n 12 touchmegames.desktop > /usr/share/applnk/Games/touchmegames.desktop
-echo Icon=${INSTALL_DIR:1}images/tmgicon.png >> /usr/share/applnk/Games/touchmegames.desktop
+head -n 12 touchmegames.desktop > ${PREFIX}/share/applications/touchmegames.desktop
+echo Icon=${INSTALL_DIR}images/tmgicon.png >> ${PREFIX}/share/applications/touchmegames.desktop

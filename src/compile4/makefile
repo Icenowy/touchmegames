@@ -22,35 +22,35 @@ debug: devents.o dinterface.o dsupport.o
 	ranlib lib$(GAME_NAME).a
 
 events.o: events.cpp $(GAME_NAME).h
-	g++ events.cpp -c $(INC) $(GTK_CFLAGS)
+	g++ events.cpp -c $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 	
 interface.o: interface.cpp $(GAME_NAME).h
-	g++ interface.cpp -c $(INC) $(GTK_CFLAGS)
+	g++ interface.cpp -c $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 	
 support.o: support.cpp $(GAME_NAME).h
-	g++ support.cpp -c $(INC) $(GTK_CFLAGS)
+	g++ support.cpp -c $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 	
 gameptr.o: ../lib/gameptr.cpp ../lib/gameptr.h
-	g++ ../lib/gameptr.cpp -c $(INC) $(GTK_CFLAGS)
+	g++ ../lib/gameptr.cpp -c $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 
 keypad.o: ../lib/keypad.cpp ../lib/keypad.h
-	g++ ../lib/keypad.cpp -c $(INC) $(GTK_CFLAGS)
+	g++ ../lib/keypad.cpp -c $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 	
 	
 devents.o: events.cpp $(GAME_NAME).h
-	g++ events.cpp -c -g $(INC) $(GTK_CFLAGS)
+	g++ events.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 	
 dinterface.o: interface.cpp $(GAME_NAME).h
-	g++ interface.cpp -c -g $(INC) $(GTK_CFLAGS)
+	g++ interface.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 	
 dsupport.o: support.cpp $(GAME_NAME).h
-	g++ support.cpp -c -g $(INC) $(GTK_CFLAGS)
+	g++ support.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 	
 dgameptr.o: ../lib/gameptr.cpp ../lib/gameptr.h
-	g++ ../lib/gameptr.cpp -c -g $(INC) $(GTK_CFLAGS)
+	g++ ../lib/gameptr.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 
 dkeypad.o: ../lib/keypad.cpp ../lib/keypad.h
-	g++ ../lib/keypad.cpp -c -g $(INC) $(GTK_CFLAGS)
+	g++ ../lib/keypad.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 
 
 clean:

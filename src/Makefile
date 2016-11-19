@@ -14,11 +14,14 @@ GAME_LIBS=lib/libgameptr.a gorillathrilla/libgorillathrilla.a \
 INC=-Ilib -Iinclude -I. -Igorillathrilla -Ivideopoker -Iflogthedolphin -Iwordhunt -Ithreescompany -Itritowers \
 	 -Icompile4 -Ifoxyboxy -Isecretphrase -Iconsume21 -Isudoku -Idropzone -Ifotoseek -Inonogram -Ifortresscrackers \
 	 -Imemory
-	
+
+PREFIX=/usr
+
 #-Idart01 -IdartCountUp -Idarttictactoe -Idartlowball -Idartcountdown  -Idartcricket -Idartcricket10
-INSTALL_DIR=/usr/local/share/touchmegames/
+INSTALL_DIR=${PREFIX}/share/touchmegames/
 LIB=-lasound lib/libgameptr.a
 
+GENERAL_CFLAGS=-DINSTALL_DIR="\"$(INSTALL_DIR)\""
 GTK_CFLAGS = `pkg-config --cflags gtk+-2.0` -DGTK_DISABLE_DEPRECATED=1 -DGTK_MULTIHEAD_SAFE=1
 GTK_LFLAGS = `pkg-config --cflags --libs gtk+-2.0`  -DGTK_DISABLE_DEPRECATED=1 -DGTK_MULTIHEAD_SAFE=1
 XML_LFLAGS=`xml2-config --cflags --libs`
@@ -26,36 +29,36 @@ GTHREAD_LFLAGS=`pkg-config --cflags --libs gthread-2.0`
 
 all: interface.o support.o events.o lib
 	for i in ${GAMES}; do \
-		(cd $$i; ${MAKE}); \
+		(cd $$i; ${MAKE} "INSTALL_DIR=${INSTALL_DIR}"); \
 	done
 	g++ main.cpp interface.o support.o events.o -o touchmegames lib/gameptr.o lib/tmgimage.o lib/altprogressbar.o lib/tmgtogglebutton.o $(GAME_LIBS) \
 		$(XML_LFLAGS) $(INC) $(GTK_LFLAGS) $(LIB) $(GTHREAD_LFLAGS) #lib/dartlib.o
 
 debug:
-	g++ interface.cpp -c -g $(INC) $(GTK_CFLAGS)
-	g++ support.cpp -c -g $(INC) $(GTK_CFLAGS)
-	g++ events.cpp -c -g $(INC) $(GTK_CFLAGS)
-	(cd lib; ${MAKE} debug)
+	g++ interface.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
+	g++ support.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
+	g++ events.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
+	(cd lib; ${MAKE} "INSTALL_DIR=${INSTALL_DIR}" debug)
 	for i in ${GAMES}; do \
-		(cd $$i; ${MAKE} debug); \
+		(cd $$i; ${MAKE} "INSTALL_DIR=${INSTALL_DIR}" debug); \
 	done
 	g++ main.cpp interface.o support.o events.o -o touchmegames lib/gameptr.o lib/altprogressbar.o -g \
 		$(GAME_LIBS) $(XML_LFLAGS) $(INC) $(GTK_LFLAGS) $(LIB) $(GTHREAD_LFLAGS)
 
 interface.o: touchmegames.h interface.cpp
-	g++ interface.cpp -c $(INC) $(GTK_CFLAGS)
+	g++ interface.cpp -c $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 	
 support.o: touchmegames.h support.cpp	
-	g++ support.cpp -c $(INC) $(GTK_CFLAGS)
+	g++ support.cpp -c $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 	
 events.o: touchmegames.h events.cpp
-	g++ events.cpp -c $(INC) $(GTK_CFLAGS)
+	g++ events.cpp -c $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 	
 lib:
-	(cd lib; ${MAKE})
+	(cd lib; ${MAKE} "INSTALL_DIR=${INSTALL_DIR}")
 
 install:
-	./install.sh
+	INSTALL_DIR=${INSTALL_DIR} PREFIX=${PREFIX} ./install.sh
 #	if [ ! -e touchmegames ]; then make; fi
 #	if [ ! -e ${INSTALL_DIR} ]; \
 #		then mkdir ${INSTALL_DIR}; \
@@ -70,13 +73,13 @@ install:
 #	cp -f touchmegames.desktop /usr/share/applnk/Games
 
 uninstall:
-	./uninstall.sh
+	INSTALL_DIR=${INSTALL_DIR} PREFIX=${PREFIX} ./uninstall.sh
 #	rm -rf ${INSTALL_DIR}
 #	rm -f /usr/bin/touchmegames
 #	rm -f /usr/share/applnk/Games/touchmegames.desktop
 	
 clean:
 	for i in ${GAMES}; do \
-		(cd $$i; ${MAKE} clean); \
+		(cd $$i; ${MAKE} "INSTALL_DIR=${INSTALL_DIR}" clean); \
 	done
 	rm -f *.o *~ touchmegames

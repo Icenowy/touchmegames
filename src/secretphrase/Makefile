@@ -3,6 +3,7 @@
 
 INC=-I../lib -I. -Ixmlparser
 
+GENERAL_CFLAGS=-DINSTALL_DIR="\"$(INSTALL_DIR)\""
 GTK_CFLAGS = `pkg-config --cflags gtk+-2.0`  -DGTK_DISABLE_DEPRECATED=1 -DGTK_MULTIHEAD_SAFE=1
 GTK_LFLAGS = `pkg-config --cflags --libs gtk+-2.0`  -DGTK_DISABLE_DEPRECATED=1 -DGTK_MULTIHEAD_SAFE=1
 XML_CFLAGS = `xml2-config --cflags`
@@ -20,45 +21,45 @@ game: all main.cpp gameptr.o keypad.o altprogressbar.o
 	g++ main.cpp events.o interface.o support.o gameptr.o keypad.o altprogressbar.o xmlparser/xmlparser.o -o $(GAME_NAME) $(INC) $(GTK_LFLAGS) $(XML_LFLAGS)
 
 debug: devents.o dinterface.o dsupport.o 
-	(cd xmlparser; $(MAKE) debug;)
+	(cd xmlparser; $(MAKE) "INSTALL_DIR=${INSTALL_DIR}" debug;)
 	ar crv lib$(GAME_NAME).a events.o interface.o support.o xmlparser/xmlparser.o
 	ranlib lib$(GAME_NAME).a
 
 events.o: events.cpp $(GAME_NAME).h
-	g++ events.cpp -c $(INC) $(GTK_CFLAGS) $(XML_CFLAGS)
+	g++ events.cpp -c $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS) $(XML_CFLAGS)
 	
 interface.o: interface.cpp $(GAME_NAME).h
-	g++ interface.cpp -c $(INC) $(GTK_CFLAGS) $(XML_CFLAGS)
+	g++ interface.cpp -c $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS) $(XML_CFLAGS)
 	
 support.o: support.cpp $(GAME_NAME).h
-	g++ support.cpp -c $(INC) $(GTK_CFLAGS) $(XML_CFLAGS)
+	g++ support.cpp -c $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS) $(XML_CFLAGS)
 	
 gameptr.o: ../lib/gameptr.cpp ../lib/gameptr.h
-	g++ ../lib/gameptr.cpp -c $(INC) $(GTK_CFLAGS)
+	g++ ../lib/gameptr.cpp -c $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 
 keypad.o: ../lib/keypad.cpp ../lib/keypad.h
-	g++ ../lib/keypad.cpp -c $(INC) $(GTK_CFLAGS)
+	g++ ../lib/keypad.cpp -c $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 
 altprogressbar.o: ../lib/altprogressbar.cpp ../lib/altprogressbar.h
-	g++ ../lib/altprogressbar.cpp -c $(INC) $(GTK_CFLAGS)
+	g++ ../lib/altprogressbar.cpp -c $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 
 xmlparser.o:
-	(cd xmlparser; $(MAKE))
+	(cd xmlparser; $(MAKE) "INSTALL_DIR=${INSTALL_DIR}")
 
 devents.o: events.cpp $(GAME_NAME).h
-	g++ events.cpp -c -g $(INC) $(GTK_CFLAGS)  $(XML_CFLAGS)
+	g++ events.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)  $(XML_CFLAGS)
 	
 dinterface.o: interface.cpp $(GAME_NAME).h
-	g++ interface.cpp -c -g $(INC) $(GTK_CFLAGS)  $(XML_CFLAGS)
+	g++ interface.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)  $(XML_CFLAGS)
 	
 dsupport.o: support.cpp $(GAME_NAME).h
-	g++ support.cpp -c -g $(INC) $(GTK_CFLAGS)  $(XML_CFLAGS)
+	g++ support.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)  $(XML_CFLAGS)
 	
 dgameptr.o: ../lib/gameptr.cpp ../lib/gameptr.h
-	g++ ../lib/gameptr.cpp -c -g $(INC) $(GTK_CFLAGS)
+	g++ ../lib/gameptr.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 
 dkeypad.o: ../lib/keypad.cpp ../lib/keypad.h
-	g++ ../lib/keypad.cpp -c -g $(INC) $(GTK_CFLAGS)
+	g++ ../lib/keypad.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 
 clean:
 	rm -rf *.o *~ *.a $(GAME_NAME)

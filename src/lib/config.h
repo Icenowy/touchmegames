@@ -20,15 +20,6 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-// If you want to install in a different directory, change
-// this to the directory to install...Also change the same
-// named variable in the main Makefile
-#ifdef __unix__
-#define INSTALL_DIR "/usr/local/share/touchmegames/"
-#else
-#define INSTALL_DIR "c:/program files/touchmegames/"
-#endif
-
 // If you want to compile for fullscreen, set this to true
 #define FULL_SCREEN false
 

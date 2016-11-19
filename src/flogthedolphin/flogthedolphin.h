@@ -25,7 +25,7 @@
 #include <map>
 #include <gameptr.h>
 
-#define ftdDeckLocation "/usr/local/share/touchmegames/flogthedolphin/images/"
+#define ftdDeckLocation (INSTALL_DIR "/flogthedolphin/images/")
 
 class FLOG_THE_DOLPHIN : public GAME_PTR {
 private:

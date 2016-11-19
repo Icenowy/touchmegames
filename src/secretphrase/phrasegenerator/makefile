@@ -19,7 +19,7 @@ phrasegenerator: phrasegenerator.o ../xmlparser/xmlparser.o
 	cp phrasegenerator pg
 
 phrasegenerator.o: phrasegenerator.cpp phrasegenerator.h
-	g++ phrasegenerator.cpp -c -Wall $(GTK_CFLAGS) $(XML_CFLAGS) $(INC)
+	g++ phrasegenerator.cpp -c -Wall $(GTK_CFLAGS) $(GENERAL_CFLAGS) $(XML_CFLAGS) $(INC)
 
 xmlparser.o:
 	(cd xmlparser; $(MAKE))

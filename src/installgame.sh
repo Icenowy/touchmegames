@@ -3,7 +3,6 @@
 INSTALL_DIR=$1
 GAME_NAME=$2
 
-
 if [ ! -e $INSTALL_DIR$GAME_NAME ]; \
     then mkdir $INSTALL_DIR$GAME_NAME; \
 fi

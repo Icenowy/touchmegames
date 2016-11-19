@@ -7,5 +7,5 @@ install:
 	fi
 	cp *.* /usr/local/share/touchmegames/images
 	for i in ${SUBDIRS}; do \
-		(cd $$i; ${MAKE} install;); \
+		(cd $$i; ${MAKE} "GENERAL_CFLAGS=${GENERAL_CFLAGS} install;); \
 	done  

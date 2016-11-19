@@ -38,7 +38,7 @@ void AltProgressBar::init() {
     doneInit = true;
     frameWidget = gtk_frame_new(NULL);
     fixedWidget = gtk_fixed_new();
-    gtk_fixed_set_has_window((GtkFixed *)fixedWidget, TRUE);
+    gtk_widget_set_has_window((GtkWidget *)fixedWidget, TRUE);
     gtk_widget_modify_bg(fixedWidget, GTK_STATE_NORMAL, &color);
 
     imageWidget = gtk_image_new();

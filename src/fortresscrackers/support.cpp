@@ -216,7 +216,7 @@ bool FortressCrackers::isOnTop(GtkWidget *widget) {
     rect.width = 1;
     rect.height = 1;
     for (idx = offset + 1; idx < 36; ++idx) {
-        if (gtk_widget_intersect(cards[idx], &rect, NULL) && GTK_WIDGET_VISIBLE(cards[idx]->parent) == TRUE) {
+        if (gtk_widget_intersect(cards[idx], &rect, NULL) && gtk_widget_get_visible(cards[idx]->parent) == TRUE) {
             return false;
         }
     }
@@ -228,7 +228,7 @@ bool FortressCrackers::isOnTop(GtkWidget *widget) {
     rect.width = 1;
     rect.height = 1;
     for (idx = offset + 1; idx < 36; ++idx) {
-        if (gtk_widget_intersect(cards[idx], &rect, NULL) && GTK_WIDGET_VISIBLE(cards[idx]->parent) == TRUE) {
+        if (gtk_widget_intersect(cards[idx], &rect, NULL) && gtk_widget_get_visible(cards[idx]->parent) == TRUE) {
             return false;
         }
     }
@@ -241,7 +241,7 @@ bool FortressCrackers::isOnTop(GtkWidget *widget) {
     rect.height = 1;
     for (idx = offset + 1; idx < 36; ++idx) {
         
-        if (gtk_widget_intersect(cards[idx], &rect, NULL) && GTK_WIDGET_VISIBLE(cards[idx]->parent) == TRUE) {
+        if (gtk_widget_intersect(cards[idx], &rect, NULL) && gtk_widget_get_visible(cards[idx]->parent) == TRUE) {
             return false;
         }
     }
@@ -254,7 +254,7 @@ bool FortressCrackers::isOnTop(GtkWidget *widget) {
     rect.height = 1;
     for (idx = offset + 1; idx < 36; ++idx) {
         
-        if (gtk_widget_intersect(cards[idx], &rect, NULL) && GTK_WIDGET_VISIBLE(cards[idx]->parent) == TRUE) {
+        if (gtk_widget_intersect(cards[idx], &rect, NULL) && gtk_widget_get_visible(cards[idx]->parent) == TRUE) {
             return false;
         }
     }

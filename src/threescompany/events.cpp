@@ -54,7 +54,7 @@ int ThreesCompany::checkTrip(int hold) {
     int trip[3];
     
     for (int i = 0; i < 3; ++i) {
-        trip[i] = (int)g_object_get_data((GObject *)cardHoldImages[hold][i], KEY_STR);
+        trip[i] = (intptr_t)g_object_get_data((GObject *)cardHoldImages[hold][i], KEY_STR);
 
         // adjust the number for the actual value
         trip[i] = 13 - ((trip[i] - 1) / 4);
@@ -188,7 +188,7 @@ void ThreesCompany::holdReleased(GtkWidget *widget, GdkEventButton *event, gpoin
     }
     if (tc->cardMasksCard == tc->cards[2]) {
         tc->cardHoldImages[hold][holdCard] 
-                        = tc->createCard((int)g_object_get_data((GObject *)tc->cards[2], KEY_STR));
+                        = tc->createCard((intptr_t)g_object_get_data((GObject *)tc->cards[2], KEY_STR));
             
         gtk_fixed_put((GtkFixed *)tc->fixed, tc->cardHoldImages[hold][holdCard], 160 + (131 * hold), 
                         200 + (30 * holdCard));
@@ -196,10 +196,10 @@ void ThreesCompany::holdReleased(GtkWidget *widget, GdkEventButton *event, gpoin
         gtk_widget_show_all(tc->cardHoldImages[hold][holdCard]);
         
         if (tc->cards[0] != NULL) {
-            card0 = (int)g_object_get_data((GObject *)tc->cards[0], KEY_STR);
+            card0 = (intptr_t)g_object_get_data((GObject *)tc->cards[0], KEY_STR);
         }
         if (tc->cards[1] != NULL) {
-            card1 = (int)g_object_get_data((GObject *)tc->cards[1], KEY_STR);
+            card1 = (intptr_t)g_object_get_data((GObject *)tc->cards[1], KEY_STR);
         }
         
         if (tc->cards[0] != NULL) {
@@ -253,7 +253,7 @@ void ThreesCompany::holdReleased(GtkWidget *widget, GdkEventButton *event, gpoin
         previousCard = 2;
     }
     if (previousCard != -1) {
-        card0 = (int)g_object_get_data((GObject *)tc->topCardHoldImages[previousCard], KEY_STR);
+        card0 = (intptr_t)g_object_get_data((GObject *)tc->topCardHoldImages[previousCard], KEY_STR);
         gtk_widget_destroy(tc->topCardHoldImages[previousCard]);
         tc->topCardHoldImages[previousCard] = NULL;
         tc->cardHoldImages[hold][holdCard] = tc->createCard(card0);
@@ -278,7 +278,7 @@ void ThreesCompany::holdReleased(GtkWidget *widget, GdkEventButton *event, gpoin
         }
     }
     if (previousCard != -1) {
-        card0 = (int)g_object_get_data((GObject *)tc->cardHoldImages[previousHold][previousCard], KEY_STR);
+        card0 = (intptr_t)g_object_get_data((GObject *)tc->cardHoldImages[previousHold][previousCard], KEY_STR);
         gtk_widget_destroy(tc->cardHoldImages[previousHold][previousCard]);
         tc->cardHoldImages[previousHold][previousCard] = NULL;
         tc->cardHoldImages[hold][holdCard] = tc->createCard(card0);
@@ -323,17 +323,17 @@ void ThreesCompany::topHoldReleased(GtkWidget *widget, GdkEventButton *event, gp
     }
     
     if (tc->cardMasksCard == tc->cards[2]) {
-        tc->topCardHoldImages[hold] = tc->createCard((int)g_object_get_data((GObject *)tc->cards[2], KEY_STR));
+        tc->topCardHoldImages[hold] = tc->createCard((intptr_t)g_object_get_data((GObject *)tc->cards[2], KEY_STR));
         
         gtk_fixed_put((GtkFixed *)tc->fixed, tc->topCardHoldImages[hold], 185 + (173 * hold), 40);
         
         gtk_widget_show_all(tc->topCardHoldImages[hold]);
         
         if (tc->cards[0] != NULL) {
-            card0 = (int)g_object_get_data((GObject *)tc->cards[0], KEY_STR);
+            card0 = (intptr_t)g_object_get_data((GObject *)tc->cards[0], KEY_STR);
         }
         if (tc->cards[1] != NULL) {
-            card1 = (int)g_object_get_data((GObject *)tc->cards[1], KEY_STR);
+            card1 = (intptr_t)g_object_get_data((GObject *)tc->cards[1], KEY_STR);
         }
         
         if (tc->cards[0] != NULL) {
@@ -382,7 +382,7 @@ void ThreesCompany::topHoldReleased(GtkWidget *widget, GdkEventButton *event, gp
         previousCard = 2;
     }
     if (previousCard != -1) {
-        card0 = (int)g_object_get_data((GObject *)tc->topCardHoldImages[previousCard], KEY_STR);
+        card0 = (intptr_t)g_object_get_data((GObject *)tc->topCardHoldImages[previousCard], KEY_STR);
         gtk_widget_destroy(tc->topCardHoldImages[previousCard]);
         tc->topCardHoldImages[previousCard] = NULL;
         tc->topCardHoldImages[hold] = tc->createCard(card0);
@@ -400,7 +400,7 @@ void ThreesCompany::topHoldReleased(GtkWidget *widget, GdkEventButton *event, gp
         }
     }
     if (previousCard != -1) {
-        card0 = (int)g_object_get_data((GObject *)tc->cardHoldImages[previousHold][previousCard], KEY_STR);
+        card0 = (intptr_t)g_object_get_data((GObject *)tc->cardHoldImages[previousHold][previousCard], KEY_STR);
         gtk_widget_destroy(tc->cardHoldImages[previousHold][previousCard]);
         tc->cardHoldImages[previousHold][previousCard] = NULL;
         tc->topCardHoldImages[hold] = tc->createCard(card0);

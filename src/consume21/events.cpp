@@ -122,8 +122,8 @@ gboolean Consume21::timeout(gpointer ptr) {
 
 void Consume21::colPressed(GtkWidget *widget, GdkEventKey *event, gpointer ptr) {
     Consume21 *consume(reinterpret_cast<Consume21 *>(ptr));
-    int column(((int)g_object_get_data((GObject *)widget, KEY_STR) & 0xF) - 1);
-    int cardNum((((int)g_object_get_data((GObject *)consume->mugImages[consume->totalMugImages - 1], KEY_STR) >> 4) & 0xF));
+    int column(((intptr_t)g_object_get_data((GObject *)widget, KEY_STR) & 0xF) - 1);
+    int cardNum((((intptr_t)g_object_get_data((GObject *)consume->mugImages[consume->totalMugImages - 1], KEY_STR) >> 4) & 0xF));
     int soft(0);
     std::string str;
     if (consume->gameState == WAITING) {

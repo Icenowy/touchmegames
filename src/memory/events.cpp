@@ -170,8 +170,8 @@ void Memory::cardPressed(GtkWidget *widget, GdkEventButton *event, gpointer ptr)
     m->started = true;
     
     if (m->gameState == RUNNING) {
-        sstr << (int)g_object_get_data((GObject *)widget, KEY_STR) + 1 << ".png";
-        if ((int)g_object_get_data((GObject *)widget, KEY_STR) == -1) {
+        sstr << (intptr_t)g_object_get_data((GObject *)widget, KEY_STR) + 1 << ".png";
+        if ((intptr_t)g_object_get_data((GObject *)widget, KEY_STR) == -1) {
             return;
         }
         if (m->cardsPressed[0] == 0) {
@@ -181,11 +181,11 @@ void Memory::cardPressed(GtkWidget *widget, GdkEventButton *event, gpointer ptr)
         else if (m->cardsPressed[1] == 0 && m->cardsPressed[0] != widget) {
             
             
-            m->cardsPressed[1] = widget; // (int)g_object_get_data((GObject *)widget, KEY_STR) + 1;
+            m->cardsPressed[1] = widget; // (intptr_t)g_object_get_data((GObject *)widget, KEY_STR) + 1;
             m->reloadImage(gtk_bin_get_child((GtkBin *)widget), sstr.str().c_str());
             
-            if ((int)g_object_get_data((GObject *)m->cardsPressed[0], KEY_STR)
-                    == (int)g_object_get_data((GObject *)m->cardsPressed[1], KEY_STR)) {
+            if ((intptr_t)g_object_get_data((GObject *)m->cardsPressed[0], KEY_STR)
+                    == (intptr_t)g_object_get_data((GObject *)m->cardsPressed[1], KEY_STR)) {
                 
                 // Set the data to -1 so that they can't get chosen again.
                 g_object_set_data((GObject *)m->cardsPressed[0], KEY_STR, (void *)-1);

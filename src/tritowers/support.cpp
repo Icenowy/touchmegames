@@ -309,8 +309,8 @@ int TriTowers::checkWinner() {
 
 void TriTowers::checkCards(GtkWidget *lh, GtkWidget *rh) {
     int absval(0);
-    int lhcard((int)g_object_get_data((GObject *)lh, KEY_STR)); 
-    int rhcard((int)g_object_get_data((GObject *)rh, KEY_STR));
+    int lhcard((intptr_t)g_object_get_data((GObject *)lh, KEY_STR)); 
+    int rhcard((intptr_t)g_object_get_data((GObject *)rh, KEY_STR));
     absval = abs(lhcard / 4 - 
                 rhcard / 4);
     
@@ -403,7 +403,7 @@ void TriTowers::checkCards(GtkWidget *lh, GtkWidget *rh) {
         }
         sstr.str("");
         sstr << deckLocation 
-                << (int)g_object_get_data((GObject *)rh, KEY_STR) + 1 << ".png";
+                << (intptr_t)g_object_get_data((GObject *)rh, KEY_STR) + 1 << ".png";
 //         dealCard = gtk_image_new_from_file(sstr.str().c_str());
         dealCard = loadMainImage(sstr.str().c_str());
         g_object_set_data((GObject *)dealCardBox, KEY_STR, g_object_get_data((GObject *)rh, KEY_STR));

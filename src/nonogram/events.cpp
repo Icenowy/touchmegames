@@ -159,7 +159,7 @@ gboolean NonoGram::blockClicked(GtkWidget *widget, GdkEventKey *event, gpointer 
     }
     
     image = gtk_bin_get_child((GtkBin *)widget);
-    switch ((int)g_object_get_data((GObject  *)widget, KEY_STR)) {
+    switch ((intptr_t)g_object_get_data((GObject  *)widget, KEY_STR)) {
         case BLANK:
             nonoGram->reloadImage(image, "block.png");
             nonoGram->mouseState = FILLED;

@@ -128,7 +128,7 @@ GtkWidget *SecretPhrase::createAboveBoard() {
     gtk_box_pack_start((GtkBox *)hbox, guessesLeftImg, FALSE, FALSE, 10);
     
     fixed = gtk_fixed_new();
-    gtk_fixed_set_has_window((GtkFixed *)fixed, TRUE);
+    gtk_widget_set_has_window((GtkWidget *)fixed, TRUE);
     gtk_widget_set_size_request(fixed, 260, 75);
     
 //     wheelImage1 = gtk_image_new_from_file("/usr/local/share/touchmegames/secretphrase/images/wheel.gif");
@@ -432,7 +432,7 @@ GtkWidget *SecretPhrase::init() {
     gtk_box_pack_start((GtkBox *)topvbox, createInitScreen(), FALSE, FALSE, 0);
     
     gtk_widget_show_all(topvbox);
-    gtk_widget_hide_all(normVbox);
+    gtk_widget_hide(normVbox);
     
     // I'm sure there's a better way to get the keyboard input
     // if there is no real keyboard widget, but I didn't read
@@ -457,7 +457,7 @@ GtkWidget *SecretPhrase::init() {
     wheelBarX1 = 0;
     wheelBarX2 = 2210;
     
-    gtk_widget_hide_all(normVbox);
+    gtk_widget_hide(normVbox);
     gameState = SELECTING_CATEGORY;
     
     currentScore = 0;

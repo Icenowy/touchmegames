@@ -247,12 +247,12 @@ gboolean Compile4::timeout(gpointer ptr) {
 void Compile4::colPressed(GtkWidget *widget, GdkEventKey *event, gpointer ptr) {
     Compile4 *compile(reinterpret_cast<Compile4 *>(ptr));
     if (compile->gameState == PLAYER_TURN) {
-        int col((int)g_object_get_data((GObject *)widget, KEY_STR));
+        int col((intptr_t)g_object_get_data((GObject *)widget, KEY_STR));
         for (int y = 5; y >= 0; --y) {
             if (compile->grid[col][y] == 0) {
                 compile->grid[col][y] = 1;
                 compile->widgetGrid[col][y] = compile->p1Circs[compile->move / 2];
-                compile->circx = (int)g_object_get_data((GObject *)widget, KEY_STR) * 80;
+                compile->circx = (intptr_t)g_object_get_data((GObject *)widget, KEY_STR) * 80;
                 compile->circy = -80;
                 compile->circendy = 80 * (y);
 

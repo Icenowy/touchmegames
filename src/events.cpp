@@ -21,20 +21,21 @@
 // events
 
 #include <touchmegames.h>
+#include <stdint.h>
 
 void TOUCHME_GAMES::showHighScores(GtkWidget *widget, GdkEvent *event, gpointer ptr) {
     TOUCHME_GAMES *sg(reinterpret_cast<TOUCHME_GAMES *>(ptr));
     GtkWidget *w;
     GdkColor *color;
     GtkStyle *style;
-    int game;
+    intptr_t game;
     
     if (sg->lastGameSelected) {
             gtk_event_box_set_visible_window((GtkEventBox *)sg->lastGameSelected, FALSE);
             gtk_widget_destroy(sg->previewTable);
     }
     
-    game = (int)g_object_get_data((GObject *)widget, KEY_STR);
+    game = (intptr_t)g_object_get_data((GObject *)widget, KEY_STR);
 
     gtk_fixed_move((GtkFixed *)sg->gameSelectFixed, sg->gameBg, (game & 1 ? 160: 10), ((game / 2) * 140) + 60);
     gtk_widget_show(sg->gameBg);
@@ -106,10 +107,10 @@ void TOUCHME_GAMES::gameEnded(GtkWidget *widget, gpointer ptr) {
 
 void TOUCHME_GAMES::showSubMenu(GtkWidget *widget, GdkEvent *event, gpointer ptr) {
     TOUCHME_GAMES *sg(reinterpret_cast<TOUCHME_GAMES *>(ptr));
-    int gameType((int)g_object_get_data((GObject *)widget, KEY_STR));
+    intptr_t gameType((intptr_t)g_object_get_data((GObject *)widget, KEY_STR));
     
     if (sg->lastGameSelected) {
-        sg->lastGameSelected = false;
+        sg->lastGameSelected = NULL;
         gtk_widget_destroy(sg->previewTable);
     }
     sg->addGamesToWindow(gameType, 0);
@@ -161,10 +162,10 @@ void TOUCHME_GAMES::leftArrowPressed(GtkWidget *widget, GdkEvent *event, gpointe
     TOUCHME_GAMES *tg(reinterpret_cast<TOUCHME_GAMES *>(ptr));
     unsigned long val;
     
-    val = (int)g_object_get_data((GObject *)widget, KEY_STR);
+    val = (intptr_t)g_object_get_data((GObject *)widget, KEY_STR);
     
     if (tg->lastGameSelected) {
-        tg->lastGameSelected = false;
+        tg->lastGameSelected = NULL;
         gtk_widget_destroy(tg->previewTable);
     }
     
@@ -184,10 +185,10 @@ void TOUCHME_GAMES::rightArrowPressed(GtkWidget *widget, GdkEvent *event, gpoint
     TOUCHME_GAMES *tg(reinterpret_cast<TOUCHME_GAMES *>(ptr));
     unsigned long val;
     
-    val = (int)g_object_get_data((GObject *)widget, KEY_STR);
+    val = (intptr_t)g_object_get_data((GObject *)widget, KEY_STR);
     
     if (tg->lastGameSelected) {
-        tg->lastGameSelected = false;
+        tg->lastGameSelected = NULL;
         gtk_widget_destroy(tg->previewTable);
     }
     

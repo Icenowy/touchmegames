@@ -234,14 +234,14 @@ void DropZone::moveCurrent(int x, int y) {
     
     
     if (g_object_get_data((GObject *)nextDisc, KEY_STR) != 0) {
-        reloadImage(nextDisc, imageStrs[(int)g_object_get_data((GObject *)nextDisc, KEY_STR)]);
+        reloadImage(nextDisc, imageStrs[(intptr_t)g_object_get_data((GObject *)nextDisc, KEY_STR)]);
     }
     if (g_object_get_data((GObject *)onDeck, KEY_STR) != 0) {
-        reloadImage(onDeck, imageStrs[(int)g_object_get_data((GObject *)onDeck, KEY_STR)]);
+        reloadImage(onDeck, imageStrs[(intptr_t)g_object_get_data((GObject *)onDeck, KEY_STR)]);
     }
     if (valid && g_object_get_data((GObject *)discs[x][y], KEY_STR) != 0) {
         moveDropper(x, y);
-        reloadImage(discs[x][y], imageStrs[(int)g_object_get_data((GObject *)discs[x][y], KEY_STR)]);
+        reloadImage(discs[x][y], imageStrs[(intptr_t)g_object_get_data((GObject *)discs[x][y], KEY_STR)]);
     }
 }
 
@@ -267,7 +267,7 @@ int DropZone::moveRiser() {
                 int c = getData(x, 0);
                 if (c > 0) {
                     std::string str("disc");
-                    str += (char)((int)g_object_get_data((GObject *)discs[x][0], KEY_STR) + '0');
+                    str += (char)((intptr_t)g_object_get_data((GObject *)discs[x][0], KEY_STR) + '0');
                     str += "b.png";
                     reloadImage(discs[x][0], str);
                 }
@@ -316,7 +316,7 @@ int DropZone::getData(int x, int y) {
     if (GTK_IS_OBJECT((GtkObject *)discs[x][y]) == FALSE) {
         return -1;
     }
-    return (int)g_object_get_data((GObject *)discs[x][y], KEY_STR);
+    return (intptr_t)g_object_get_data((GObject *)discs[x][y], KEY_STR);
 }
 
 void DropZone::updateScore(int addition) {

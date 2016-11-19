@@ -85,7 +85,7 @@ gboolean FortressCrackers::timeout(gpointer ptr) {
             f->progress.text(sstr.str().c_str());
             break;
         case TAKE_WILD_SCORE:
-            if (GTK_WIDGET_VISIBLE(f->userCard->parent) == TRUE) {
+            if (gtk_widget_get_visible(f->userCard->parent) == TRUE) {
                 // Hide the card and show the bonus[4]
                 gtk_widget_hide(f->userCard->parent);
                 

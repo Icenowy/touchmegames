@@ -720,7 +720,7 @@ void NonoGram::test() {
     
     for (int x = 0; x < nonoSize; ++x) {
         for (int y = 0; y < nonoSize; ++y) {
-            ng[y][x] = (int)g_object_get_data((GObject  *)gtk_widget_get_parent(cells[x][y]), KEY_STR);
+            ng[y][x] = (intptr_t)g_object_get_data((GObject  *)gtk_widget_get_parent(cells[x][y]), KEY_STR);
         }
     }
     while (retval) {
@@ -753,12 +753,12 @@ bool NonoGram::checkBoard(char ng[10][10]) {
     for (int x = 0; x < nonoSize; ++x) {
         for (int y = 0; y < nonoSize; ++y) {
             if (ng == NULL) {
-                if ((int)g_object_get_data((GObject  *)gtk_widget_get_parent(cells[x][y]), KEY_STR) == FILLED && nonoGram[y][x] != 1) {
+                if ((intptr_t)g_object_get_data((GObject  *)gtk_widget_get_parent(cells[x][y]), KEY_STR) == FILLED && nonoGram[y][x] != 1) {
 //                     std::cout << "Error at " << x << ' ' << y << std::endl;
                     retVal = false;
                 }
             
-                if (nonoGram[y][x] == 1 && (int)g_object_get_data((GObject  *)gtk_widget_get_parent(cells[x][y]), KEY_STR) != FILLED) {
+                if (nonoGram[y][x] == 1 && (intptr_t)g_object_get_data((GObject  *)gtk_widget_get_parent(cells[x][y]), KEY_STR) != FILLED) {
 //                     std::cout << "Missing at " << x << ' ' << y << std::endl;
                     retVal = false;
                 }
@@ -785,7 +785,7 @@ bool NonoGram::checkBoard(char ng[10][10]) {
 void NonoGram::fillBoard() {
     for (int x = 0; x < nonoSize; ++x) {
         for (int y = 0; y < nonoSize; ++y) {
-            if ((int)g_object_get_data((GObject  *)gtk_widget_get_parent(cells[x][y]), KEY_STR) == BLANK) {
+            if ((intptr_t)g_object_get_data((GObject  *)gtk_widget_get_parent(cells[x][y]), KEY_STR) == BLANK) {
                 if (nonoGram[y][x] == 1) {
                     reloadImage(cells[x][y], "blockerr.png");
                 }
@@ -793,7 +793,7 @@ void NonoGram::fillBoard() {
                     reloadImage(cells[x][y], "Xerr.png");
                 }
             }
-            else if ((int)g_object_get_data((GObject  *)gtk_widget_get_parent(cells[x][y]), KEY_STR) != nonoGram[y][x]) {
+            else if ((intptr_t)g_object_get_data((GObject  *)gtk_widget_get_parent(cells[x][y]), KEY_STR) != nonoGram[y][x]) {
                 if (nonoGram[y][x] == 1) {
                     reloadImage(cells[x][y], "blockerr.png");
                 }

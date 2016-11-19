@@ -587,7 +587,7 @@ void DropZone::checkForFallthrough() {
 //                     }
                     else {
                         int tmpx(x), tmpy(y);
-                        int color((int)g_object_get_data((GObject *)discs[x][y], KEY_STR));
+                        int color((intptr_t)g_object_get_data((GObject *)discs[x][y], KEY_STR));
 //                         std::cout << "Time To drop" << std::endl;
                         outputGame();
 //                         std::cout << "Drop this guy: " << tmpx << ' ' << tmpy << std::endl;

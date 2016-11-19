@@ -28,6 +28,7 @@
 #include <sys/mount.h>
 #endif
 #include <errno.h>
+#include <unistd.h>
 
 int TmgDir::printDirectory(std::string path, std::vector<std::string> &directory, 
                            DirOpts opts, std::string extmask) {

@@ -147,7 +147,7 @@ gboolean SecretPhrase::timeout(gpointer ptr) {
                     else {
                         sp->gameState = SELECTING_CATEGORY;
                         gtk_widget_show_all(sp->initWidget);
-                        gtk_widget_hide_all(sp->normVbox);
+                        gtk_widget_hide(sp->normVbox);
                         sp->progressValue = 400;
                         sp->progress.percent(100);
                         sp->progress.show();
@@ -177,7 +177,7 @@ gboolean SecretPhrase::timeout(gpointer ptr) {
                     else {
                         sp->gameState = SELECTING_CATEGORY;
                         gtk_widget_show_all(sp->initWidget);
-                        gtk_widget_hide_all(sp->normVbox);
+                        gtk_widget_hide(sp->normVbox);
                     }
                 }
                 sp->handleCountDown = 10;
@@ -196,7 +196,7 @@ void SecretPhrase::lowerLetterPressed(GtkWidget *widget, GdkEventKey *event, gpo
     if (sp->gameState != HANDLING_KEY && sp->gameState != SPINNING) {
         int x, y, key;
         std::stringstream sstr;
-        sp->currentKey = (int)g_object_get_data((GObject *)widget, KEY_STR);
+        sp->currentKey = (intptr_t)g_object_get_data((GObject *)widget, KEY_STR);
         key = sp->currentKey;
         if (sp->used[key - 'a']) {
             return;
@@ -329,7 +329,7 @@ void SecretPhrase::solvePhrase(GtkWidget *widget, GdkEventKey *event, gpointer p
 
 void SecretPhrase::categorySelected(GtkWidget *widget, GdkEventKey *event, gpointer ptr) {
     SecretPhrase *sp(reinterpret_cast<SecretPhrase *>(ptr));
-    int cat((int)g_object_get_data((GObject *)widget, KEY_STR));
+    int cat((intptr_t)g_object_get_data((GObject *)widget, KEY_STR));
     
     switch (cat) {
         case CatMisc:

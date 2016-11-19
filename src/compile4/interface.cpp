@@ -422,7 +422,7 @@ GtkWidget *Compile4::init() {
     gtk_widget_show_all(topFixed);
     
     startRound();
-    gtk_widget_hide_all(scoreWindow);
+    gtk_widget_hide(scoreWindow);
     gtk_widget_hide(scorebg);
     timer = g_timeout_add(50, timeout, this);
     

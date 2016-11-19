@@ -24,7 +24,7 @@
 
 void FoxyBoxy::removeLine(int line) {
     for (int i = 0; i < 10; ++i) {
-        int type((int)g_object_get_data((GObject *)blocks[i][line - 1], KEY_STR));
+        int type((intptr_t)g_object_get_data((GObject *)blocks[i][line - 1], KEY_STR));
         std::stringstream sstr;
         if (type != 0) {
             

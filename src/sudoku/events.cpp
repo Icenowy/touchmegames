@@ -179,7 +179,7 @@ void Sudoku::tilePressed(GtkWidget *widget, GdkEventKey *event, gpointer ptr) {
         sudoku->gameState = RUNNING;
     }
     image = gtk_bin_get_child((GtkBin *)widget);
-    if ((int)g_object_get_data((GObject *)widget, KEY_STR) < 7) {
+    if ((intptr_t)g_object_get_data((GObject *)widget, KEY_STR) < 7) {
         
         if (sudoku->currentInt != 0) {
             std::stringstream sstr;
@@ -203,18 +203,18 @@ void Sudoku::tilePressed(GtkWidget *widget, GdkEventKey *event, gpointer ptr) {
                 sudoku->gameState = TAKE_PUZZLE_SCORE;
             }
         }
-        else if ((int)g_object_get_data((GObject *)widget, KEY_STR) < 7) {
+        else if ((intptr_t)g_object_get_data((GObject *)widget, KEY_STR) < 7) {
             sudoku->reloadImage(image, "null.gif");
             g_object_set_data((GObject *)widget, KEY_STR, 0);
         }
     }
-    else if ((int)g_object_get_data((GObject *)widget, KEY_STR) > 6) {
+    else if ((intptr_t)g_object_get_data((GObject *)widget, KEY_STR) > 6) {
         // it's a prefilled number, set the currentInt to this
-        sudoku->currentInt = 255 - (int)g_object_get_data((GObject *)widget, KEY_STR);
+        sudoku->currentInt = 255 - (intptr_t)g_object_get_data((GObject *)widget, KEY_STR);
     }
     else if (sudoku->currentInt == 0) {
         
-        if ((int)g_object_get_data((GObject *)widget, KEY_STR) < 7) {
+        if ((intptr_t)g_object_get_data((GObject *)widget, KEY_STR) < 7) {
             sudoku->reloadImage(image, "null.gif");
             g_object_set_data((GObject *)widget, KEY_STR, 0);
         }
@@ -224,7 +224,7 @@ void Sudoku::tilePressed(GtkWidget *widget, GdkEventKey *event, gpointer ptr) {
 void Sudoku::numberClicked(GtkWidget *widget, GdkEventKey *event, gpointer ptr) {
     Sudoku *sudoku(reinterpret_cast<Sudoku *>(ptr));
     
-    sudoku->currentInt = (int)g_object_get_data((GObject *)widget, KEY_STR);
+    sudoku->currentInt = (intptr_t)g_object_get_data((GObject *)widget, KEY_STR);
 }
 
 void Sudoku::solveClicked(GtkWidget *widget, gpointer ptr) {

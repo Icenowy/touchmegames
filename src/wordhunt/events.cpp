@@ -70,7 +70,7 @@ void WordHunt::findWord(std::string word) {
             // horizontal check
             for (int i = 0; i + x < 12 && i < len; ++i) {
                 //attempt += gtk_label_get_text((GtkLabel *)letters[x + i][y]);
-                attempt += toupper((int)g_object_get_data((GObject *)letters[x + i][y], KEY_STR));
+                attempt += toupper((intptr_t)g_object_get_data((GObject *)letters[x + i][y], KEY_STR));
             }
     
             if (word == attempt || attempt == revWord) {
@@ -91,7 +91,7 @@ void WordHunt::findWord(std::string word) {
             // vertical check
             for (int i = 0; i + y < 12 && i < len; ++i) {
                 //attempt += gtk_label_get_text((GtkLabel *)letters[x][y + i]);
-                attempt += toupper((int)g_object_get_data((GObject *)letters[x][y + i], KEY_STR));
+                attempt += toupper((intptr_t)g_object_get_data((GObject *)letters[x][y + i], KEY_STR));
             }
             
             
@@ -235,13 +235,13 @@ int WordHunt::checkMatch() {
         case HORIZONTAL:
             for (int i = beginx; i <= endx; ++i) {
                 //str += gtk_label_get_text((GtkLabel *)letters[i][beginy]);
-                str += toupper((int)g_object_get_data((GObject *)letters[i][beginy], KEY_STR));
+                str += toupper((intptr_t)g_object_get_data((GObject *)letters[i][beginy], KEY_STR));
             }
             break;
         case VERTICAL:
             for (int i = beginy; i <= endy; ++i) {
                 //str += gtk_label_get_text((GtkLabel *)letters[beginx][i]);
-                str += toupper((int)g_object_get_data((GObject *)letters[beginx][i], KEY_STR));
+                str += toupper((intptr_t)g_object_get_data((GObject *)letters[beginx][i], KEY_STR));
             }
             break;
         case NONE:
@@ -268,7 +268,7 @@ int WordHunt::checkMatch() {
                 for (int i = beginx; i <= endx; ++i) {
                     // fix me
                     std::string str;
-                    char ch((int)g_object_get_data((GObject *)letters[i][beginy], KEY_STR));
+                    char ch((intptr_t)g_object_get_data((GObject *)letters[i][beginy], KEY_STR));
                     str = "letterlo_";
                     str += ch;
                     str += ".png";
@@ -281,7 +281,7 @@ int WordHunt::checkMatch() {
                             // fix me
                             // gtk_widget_modify_style(letters[beginx][i]->parent, bgDone);
                             std::string str;
-                            char ch((int)g_object_get_data((GObject *)letters[beginx][i], KEY_STR));
+                            char ch((intptr_t)g_object_get_data((GObject *)letters[beginx][i], KEY_STR));
                             str = "letterlo_";
                             str += ch;
                             str += ".png";
@@ -341,7 +341,7 @@ int WordHunt::checkMatch() {
                     switch (direction) {
                         case HORIZONTAL:
                             for (int i = beginx; i <= endx; ++i) {
-                                char ch((int)g_object_get_data((GObject *)letters[i][beginy], KEY_STR));
+                                char ch((intptr_t)g_object_get_data((GObject *)letters[i][beginy], KEY_STR));
                                 str = "letterlo_";
                                 str += ch;
                                 str += ".png";
@@ -351,7 +351,7 @@ int WordHunt::checkMatch() {
                             break;
                         case VERTICAL:
                             for (int i = beginy; i <= endy; ++i) {
-                                char ch((int)g_object_get_data((GObject *)letters[beginx][i], KEY_STR));
+                                char ch((intptr_t)g_object_get_data((GObject *)letters[beginx][i], KEY_STR));
                                 str = "letterlo_";
                                 str += ch;
                                 str += ".png";
@@ -401,7 +401,7 @@ void WordHunt::toggleBg(GtkWidget *widget, GdkEventButton *event, gpointer ptr) 
         return;
     }
     letter = gtk_bin_get_child((GtkBin *)widget);
-    ch = (int)g_object_get_data((GObject *)letter, KEY_STR);
+    ch = (intptr_t)g_object_get_data((GObject *)letter, KEY_STR);
 
     for (int x = 0; x < numberOfRows; ++x) {
         for (int y = 0; y < numberOfRows; ++y) {
@@ -541,7 +541,7 @@ void WordHunt::mouseMove(GtkWidget *widget, GdkEventMotion *event, gpointer ptr)
             wh->lastx = wh->endx;
             wh->lasty = wh->endy;
             wh->takeCareOfMove = false;
-            ch = (int)g_object_get_data((GObject *)wh->letters[X][Y], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)wh->letters[X][Y], KEY_STR);
             str = "letterhi_";
             str += ch;
             str += ".png";
@@ -557,7 +557,7 @@ void WordHunt::mouseMove(GtkWidget *widget, GdkEventMotion *event, gpointer ptr)
             wh->lastx = wh->endx;
             wh->lasty = wh->endy;
             wh->takeCareOfMove = false;
-            ch = (int)g_object_get_data((GObject *)wh->letters[X][Y], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)wh->letters[X][Y], KEY_STR);
             str = "letterhi_";
             str += ch;
             str += ".png";
@@ -601,14 +601,14 @@ bool WordHunt::checkForHorizontalEnd(int x, int y) {
     }
     if (x == beginx && x == endx) {
         if (highlighted[endx][y]) {
-            ch = (int)g_object_get_data((GObject *)letters[endx][y], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[endx][y], KEY_STR);
             str = "letterlo_";
             str += ch;
             str += ".png";
             reloadImage(letters[endx][y], str.c_str());
         }
         else {
-            ch = (int)g_object_get_data((GObject *)letters[endx][y], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[endx][y], KEY_STR);
             str = "letter_";
             str += ch;
             str += ".png";
@@ -619,14 +619,14 @@ bool WordHunt::checkForHorizontalEnd(int x, int y) {
     }
     else if (x == endx) {
         if (highlighted[endx][y]) {
-            ch = (int)g_object_get_data((GObject *)letters[endx][y], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[endx][y], KEY_STR);
             str = "letterlo_";
             str += ch;
             str += ".png";
             reloadImage(letters[endx][y], str.c_str());
         }
         else {
-            ch = (int)g_object_get_data((GObject *)letters[endx][y], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[endx][y], KEY_STR);
             str = "letter_";
             str += ch;
             str += ".png";
@@ -641,14 +641,14 @@ bool WordHunt::checkForHorizontalEnd(int x, int y) {
     }
     else if (x == beginx) {
         if (highlighted[beginx][y]) {
-            ch = (int)g_object_get_data((GObject *)letters[beginx][y], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[beginx][y], KEY_STR);
             str = "letterlo_";
             str += ch;
             str += ".png";
             reloadImage(letters[beginx][y], str.c_str());
         }
         else {
-            ch = (int)g_object_get_data((GObject *)letters[beginx][y], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[beginx][y], KEY_STR);
             str = "letter_";
             str += ch;
             str += ".png";
@@ -686,7 +686,7 @@ void WordHunt::moveHorizontal(int x, int y) {
             --beginx;
 
             
-            ch = (int)g_object_get_data((GObject *)letters[beginx][y], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[beginx][y], KEY_STR);
             str = "letterhi_";
             str += ch;
             str += ".png";
@@ -699,7 +699,7 @@ void WordHunt::moveHorizontal(int x, int y) {
         // if one got skipped, make sure to get it
         while (endx < x) {
             ++endx;
-            ch = (int)g_object_get_data((GObject *)letters[endx][y], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[endx][y], KEY_STR);
             
             str = "letterhi_";
             str += ch;
@@ -709,14 +709,14 @@ void WordHunt::moveHorizontal(int x, int y) {
     }
     else if (x == endx - 1 && endx != beginx && movement == MOVEMENT_RIGHT) {
         if (highlighted[endx][y]) {
-            ch = (int)g_object_get_data((GObject *)letters[endx][y], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[endx][y], KEY_STR);
             str = "letterlo_";
             str += ch;
             str += ".png";
             reloadImage(letters[endx][y], str.c_str());
         }
         else {
-            ch = (int)g_object_get_data((GObject *)letters[endx][y], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[endx][y], KEY_STR);
             str = "letter_";
             str += ch;
             str += ".png";
@@ -732,14 +732,14 @@ void WordHunt::moveHorizontal(int x, int y) {
     }
     else if (x == beginx + 1 && beginx != endx && movement == MOVEMENT_LEFT) {
         if (highlighted[beginx][y]) {
-            ch = (int)g_object_get_data((GObject *)letters[beginx][y], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[beginx][y], KEY_STR);
             str = "letterlo_";
             str += ch;
             str += ".png";
             reloadImage(letters[beginx][y], str.c_str());
         }
         else {
-            ch = (int)g_object_get_data((GObject *)letters[beginx][y], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[beginx][y], KEY_STR);
             str = "letter_";
             str += ch;
             str += ".png";
@@ -759,14 +759,14 @@ bool WordHunt::checkForVerticalEnd(int x, int y) {
     }
     if (y == beginy && y == endy) {
         if (highlighted[x][beginy]) {
-            ch = (int)g_object_get_data((GObject *)letters[x][beginy], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[x][beginy], KEY_STR);
             str = "letterlo_";
             str += ch;
             str += ".png";
             reloadImage(letters[x][beginy], str.c_str());
         }
         else {
-            ch = (int)g_object_get_data((GObject *)letters[x][beginy], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[x][beginy], KEY_STR);
             str = "letter_";
             str += ch;
             str += ".png";
@@ -777,14 +777,14 @@ bool WordHunt::checkForVerticalEnd(int x, int y) {
     }
     else if (y == endy) {
         if (highlighted[x][endy]) {
-            ch = (int)g_object_get_data((GObject *)letters[x][endy], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[x][endy], KEY_STR);
             str = "letter_lo";
             str += ch;
             str += ".png";
             reloadImage(letters[x][endy], str.c_str());
         }
         else {
-            ch = (int)g_object_get_data((GObject *)letters[x][endy], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[x][endy], KEY_STR);
             str = "letter_";
             str += ch;
             str += ".png";
@@ -799,14 +799,14 @@ bool WordHunt::checkForVerticalEnd(int x, int y) {
     }
     else if (y == beginy) {
         if (highlighted[x][beginy]) {
-            ch = (int)g_object_get_data((GObject *)letters[x][beginy], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[x][beginy], KEY_STR);
             str = "letter_lo";
             str += ch;
             str += ".png";
             reloadImage(letters[x][beginy], str.c_str());
         }
         else {
-            ch = (int)g_object_get_data((GObject *)letters[x][beginy], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[x][beginy], KEY_STR);
             str = "letter_";
             str += ch;
             str += ".png";
@@ -840,7 +840,7 @@ void WordHunt::moveVertical(int x, int y) {
         
         while (beginy > y) {
             --beginy;
-            ch = (int)g_object_get_data((GObject *)letters[x][beginy], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[x][beginy], KEY_STR);
             str = "letterhi_";
             str += ch;
             str += ".png";
@@ -855,7 +855,7 @@ void WordHunt::moveVertical(int x, int y) {
         while (endy < y) {
             ++endy;
 
-            ch = (int)g_object_get_data((GObject *)letters[x][endy], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[x][endy], KEY_STR);
             str = "letterhi_";
             str += ch;
             str += ".png";
@@ -866,14 +866,14 @@ void WordHunt::moveVertical(int x, int y) {
     else if (y == endy - 1 && endy != beginy && movement == MOVEMENT_DOWN) {
         if (highlighted[x][endy]) {
       
-            ch = (int)g_object_get_data((GObject *)letters[x][endy], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[x][endy], KEY_STR);
             str = "letterlo_";
             str += ch;
             str += ".png";
             reloadImage(letters[x][endy], str.c_str());
         }
         else {
-            ch = (int)g_object_get_data((GObject *)letters[x][endy], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[x][endy], KEY_STR);
             str = "letter_";
             str += ch;
             str += ".png";
@@ -889,14 +889,14 @@ void WordHunt::moveVertical(int x, int y) {
     }
     else if (y == beginy + 1 && beginy != endy && movement == MOVEMENT_UP) {
         if (highlighted[x][beginy]) {
-            ch = (int)g_object_get_data((GObject *)letters[x][beginy], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[x][beginy], KEY_STR);
             str = "letterlo_";
             str += ch;
             str += ".png";
             reloadImage(letters[x][beginy], str.c_str());
         }
         else {
-            ch = (int)g_object_get_data((GObject *)letters[x][beginy], KEY_STR);
+            ch = (intptr_t)g_object_get_data((GObject *)letters[x][beginy], KEY_STR);
             str = "letter_";
             str += ch;
             str += ".png";

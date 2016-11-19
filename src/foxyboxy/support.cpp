@@ -90,7 +90,7 @@ int FoxyBoxy::coordsOk(Coord c[4]) {
             
             return HitSide;
         }
-        if ((int)g_object_get_data((GObject *)blocks[c[i].x][c[i].y], KEY_STR)) {
+        if ((intptr_t)g_object_get_data((GObject *)blocks[c[i].x][c[i].y], KEY_STR)) {
             
             return HitBlock;
         }
@@ -99,13 +99,13 @@ int FoxyBoxy::coordsOk(Coord c[4]) {
 }
 
 bool FoxyBoxy::canFitBlock() {
-    if ((int)g_object_get_data((GObject *)blocks[4][1], KEY_STR)) {
+    if ((intptr_t)g_object_get_data((GObject *)blocks[4][1], KEY_STR)) {
         return false;
     }
-    if ((int)g_object_get_data((GObject *)blocks[5][1], KEY_STR)) {
+    if ((intptr_t)g_object_get_data((GObject *)blocks[5][1], KEY_STR)) {
         return false;
     }
-    if ((int)g_object_get_data((GObject *)blocks[6][1], KEY_STR)) {
+    if ((intptr_t)g_object_get_data((GObject *)blocks[6][1], KEY_STR)) {
         return false;
     }
     return true;
@@ -468,7 +468,7 @@ void FoxyBoxy::checkLines() {
     for (int y = 0; y < 22; ++y) {
         int cntr(0);
         for (int x = 0; x < 10 && lineCntr < 4; ++x) {
-            if ((int)g_object_get_data((GObject *)blocks[x][y], KEY_STR)) {
+            if ((intptr_t)g_object_get_data((GObject *)blocks[x][y], KEY_STR)) {
                 if (++cntr == 10) {
                     
                     linesToFlash[lineCntr++] = y;
@@ -503,7 +503,7 @@ void FoxyBoxy::flashLines() {
         while (linesToFlash[line] != -1 && line < 4) {
             
             for (int i = 0; i < 10; ++i) {
-                    int type((int)g_object_get_data((GObject *)blocks[i][linesToFlash[line]], KEY_STR));
+                    int type((intptr_t)g_object_get_data((GObject *)blocks[i][linesToFlash[line]], KEY_STR));
                     std::stringstream sstr;
                     sstr << "type" << type << ".png";
                     reloadImage(blocks[i][linesToFlash[line]], sstr.str().c_str());

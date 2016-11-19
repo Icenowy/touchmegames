@@ -1,0 +1,16 @@
+
+This readme is for the secretphrase game.
+
+If you want to add more phrases, go into the
+phrasegenerator directory and make it, just
+a make.  Then run pg(./pg).  It will prompt
+you to what list you want to update.  After
+selecting one, it will list the different
+types for that list.  Then just insert
+the phrase you want, but insert them with
+all lowercase letters, the generator will
+check to make sure it isn't already in there.
+
+Phrases can contain, commas, single quotes
+and dashes.
+

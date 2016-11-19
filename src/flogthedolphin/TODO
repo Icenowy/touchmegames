@@ -1,0 +1,20 @@
+TODO
+
+Dolphin animation
+	a.  its possible for the dolphin to hit a object and go lower than
+		it was before.
+	b.  When the dolphin hits a buoy, it doesn't always look like it hits it.
+	c.  When the dolphin hits a buoy, it should sink and the buoy should rock.
+	d.  When the dolphin hits an object, the animation can look odd,
+		like a skip
+
+Graphics
+	a.  Could use a better beach and water
+	b.  Could use a better chair
+	c.  Could use a flogger
+
+Interface
+	a.  Need to add help
+
+Overall
+	

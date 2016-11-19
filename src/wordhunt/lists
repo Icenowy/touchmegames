@@ -1,0 +1,272 @@
+
+<lists>
+ <numberOfLists>19</numberOfLists>
+ 
+ <list>
+  <title>Words That Start With A</title>
+  <word>ABACUS</word>
+  <word>ABBEY</word>
+  <word>ADAPTER</word>
+  <word>ADVERB</word>
+  <word>ADULTHOOD</word>
+  <word>AEROSPACE</word>
+  <word>AGGREGATION</word>
+  <word>AIRBUS</word>
+  <word>APPLE</word>
+  <word>ARDUOUS</word>
+ </list>
+  
+ <list>
+  <title>C++ Words</title>
+  <word>INSTANCE</word>
+  <word>OPERATOR</word>
+  <word>OVERLOAD</word>
+  <word>SHIFT</word>
+  <word>UNSIGNED</word>
+  <word>INCLUDE</word>
+  <word>PRAGMA</word>
+  <word>PUBLIC</word>
+  <word>PROTECTED</word>
+  <word>INHERITED</word>
+ </list>
+
+ <list>
+  <title>Beers</title>
+  <word>YUENGLING</word>
+  <word>MILLER</word>
+  <word>BECKS</word>
+  <word>GUINNESS</word>
+  <word>LABATT</word>
+  <word>HEINEKIN</word>
+  <word>SAMADAM</word>
+  <word>CORONA</word>
+  <word>COORS</word>
+  <word>MOLSON</word>
+ </list>
+
+ <list>
+  <title>TV Shows</title>
+  <word>SIMPSONS</word>
+  <word>SCRUBS</word>
+  <word>FRIENDS</word>
+  <word>FAMILYGUY</word>
+  <word>SEINFEILD</word>
+  <word>WARATHOME</word>
+  <word>HOUSE</word>
+  <word>SOPRANOS</word>
+  <word>SOUTHPARK</word>
+  <word>MYTHBUSTERS</word>
+ </list>
+
+ <list>
+  <title>Astrology Signs</title>
+  <word>AQUARIUS</word>
+  <word>SAGITTARIUS</word>
+  <word>SCORPIO</word>
+  <word>PISCES</word>
+  <word>TAURUS</word>
+  <word>GEMINI</word>
+  <word>CANCER</word>
+  <word>VIRGO</word>
+  <word>CAPRICORN</word>
+  <word>LIBRA</word>
+ </list>
+
+ <list>
+  <title>Simpson Charaters</title>
+  <word>HOMER</word>
+  <word>MARGE</word>
+  <word>BART</word>
+  <word>LISA</word>
+  <word>MAGGIE</word>
+  <word>DISCOSTU</word>
+  <word>SMITHERS</word>
+  <word>FLANDERS</word>
+  <word>NICKRIVIERA</word>
+  <word>NELSON</word>
+ </list>
+
+ <list>
+  <title>U.S. States</title>
+  <word>PENNSYLVANIA</word>
+  <word>OREGON</word>
+  <word>MAINE</word>
+  <word>GEORGIA</word>
+  <word>MISSOURI</word>
+  <word>MINNISOTA</word>
+  <word>ARIZONA</word>
+  <word>TEXAS</word>
+  <word>MARYLAND</word>
+  <word>TENNESEE</word>
+ </list>
+
+ <list>
+  <title>Famous Cities</title>
+  <word>PARIS</word>
+  <word>NEWYORK</word>
+  <word>LOSANGELES</word>
+  <word>ROME</word>
+  <word>SYDNEY</word>
+  <word>NEWDELHI</word>
+  <word>TOKYO</word>
+  <word>MOSKOW</word>
+  <word>MADRID</word>
+  <word>LONDON</word>
+ </list>
+
+ <list>
+  <title>1984 Characters</title>
+  <word>BIGBROTHER</word>
+  <word>WINSTON</word>
+  <word>JULIA</word>
+  <word>AMPLEFORTH</word>
+  <word>MRSPARSONS</word>
+  <word>TILLOTSON</word>
+  <word>SYMES</word>
+  <word>CARRINGTON</word>
+  <word>MARTIN</word>
+  <word>OBRIAN</word>
+ </list>
+
+ <list>
+  <title>Months</title>
+  <word>JANUARY</word>
+  <word>FEBRUARY</word>
+  <word>MARCH</word>
+  <word>APRIL</word>
+  <word>JULY</word>
+  <word>AUGUST</word>
+  <word>SEPTEMBER</word>
+  <word>OCTOBER</word>
+  <word>NOVEMBER</word>
+  <word>DECEMBER</word>
+ </list>
+
+ <list>
+  <title>Olympic Sports</title>
+  <word>ARCHERY</word>
+  <word>BADMINTON</word>
+  <word>BASKETBALL</word>
+  <word>CYCLING</word>
+  <word>GYMNASTICS</word>
+  <word>JUDO</word>
+  <word>PINGPONG</word>
+  <word>TRIATHLON</word>
+  <word>VOLLYBALL</word>
+  <word>WRESTLING</word>
+ </list>
+
+ <list>
+  <title>Fruits</title>
+  <word>BANANA</word>
+  <word>CHERRY</word>
+  <word>MANGO</word>
+  <word>NECTARINE</word>
+  <word>PAPAYA</word>
+  <word>PEACH</word>
+  <word>PINEAPPLE</word>
+  <word>PLUM</word>
+  <word>POMEGRANATE</word>
+  <word>STRAWBERRY</word>
+ </list>
+
+ <list>
+  <title>Sienfeld</title>
+  <word>NEWMAN</word>
+  <word>KRAMER</word>
+  <word>ARTVANDELAY</word>
+  <word>BIZARROJERRY</word>
+  <word>DONNACHANG</word>
+  <word>KOKO</word>
+  <word>SCHMOOPY</word>
+  <word>ASSMAN</word>
+  <word>BUBBLEBOY</word>
+  <word>MARBLERYE</word>
+ </list>
+
+ <list>
+  <title>European Countries</title>
+  <word>AUSTRIA</word>
+  <word>DENMARK</word>
+  <word>ENGLAND</word>
+  <word>FRANCE</word>
+  <word>GERMANY</word>
+  <word>IRELAND</word>
+  <word>ITALY</word>
+  <word>NORWAY</word>
+  <word>SPAIN</word>
+  <word>SWITZERLAND</word>
+ </list>
+
+ <list>
+  <title>TouchMe Games</title>
+  <word>WORDHUNT</word>
+  <word>FOXYBOXY</word>
+  <word>CRICKET</word>
+  <word>LOWBALL</word>
+  <word>TRITOWERS</word>
+  <word>COMPILE</word>
+  <word>CONSUME</word>
+  <word>DOLPHIN</word>
+  <word>GORILLA</word>
+  <word>VIDEOPOKER</word>
+ </list>
+ 
+ <list>
+  <title>Isms</title>
+  <word>ACTIVISM</word>
+  <word>BUDDHISM</word>
+  <word>EXOTISM</word>
+  <word>FASCISM</word>
+  <word>HYPNOTISM</word>
+  <word>LEFTISM</word>
+  <word>NUDISM</word>
+  <word>OPTISM</word>
+  <word>SEXISM</word>
+  <word>VAMPIRISM</word>
+ </list>
+ 
+ <list>
+ <title>Action Words</title>
+  <word>CACKLE</word>
+  <word>CHATTER</word>
+  <word>CLAP</word>
+  <word>DREAM</word>
+  <word>FRIGHTEN</word>
+  <word>GIGGLE</word>
+  <word>HISS</word>
+  <word>SCRAMBLE</word>
+  <word>TICKLE</word>
+  <word>WHISPER</word>
+ </list>
+ 
+ <list>
+ <title>Animals</title>
+  <word>ANTELOPE</word>
+  <word>BADGER</word>
+  <word>CHICKEN</word>
+  <word>DUCK</word>
+  <word>KANGAROO</word>
+  <word>OTTER</word>
+  <word>PIG</word>
+  <word>RABBIT</word>
+  <word>SNAKE</word>
+  <word>WALRUS</word>
+ </list>
+ 
+ <list>
+ <title>Mens NameS</title>
+  <word>ANDREW</word>
+  <word>BORIS</word>
+  <word>CHRISTIAN</word>
+  <word>GEOFFREY</word>
+  <word>HENRY</word>
+  <word>JOSEPH</word>
+  <word>MICHAEL</word>
+  <word>RAYMOND</word>
+  <word>SAM</word>
+  <word>VICTOR</word>
+ </list>
+ 
+</lists>
+

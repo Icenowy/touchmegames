@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+BinaryPattern=
+Name=TouchMe Games
+MimeType=
+GenericName=Misc. Games
+Exec=touchmegames
+TerminalOptions=
+Path=
+Type=Application
+Terminal=0
+X-KDE-StartupNotify=false
+Icon=/usr/local/share/touchmegames/images/tmgicon.png

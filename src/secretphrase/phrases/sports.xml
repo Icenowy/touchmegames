@@ -1,0 +1,265 @@
+<Sports>
+<descriptortype>Athlete</descriptortype>
+<descriptortype>Stadium</descriptortype>
+<descriptortype>Event</descriptortype>
+<entries>52</entries>
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>lincoln financial field</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>pocono raceway</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>citizens bank park</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>wachovia center</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>wachovia spectrum</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>peterson events center</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>belmont park</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>yankee stadium</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>shea stadium</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>international raceway</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>madison square garden</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>times union center</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>luis armstrong stadium</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>rose bowl stadium</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>california speedway</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>mcafee coliseum</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>dodger stadium</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>thoroughbred club</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>staples center</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>michigan int'l speedway</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>michigan stadium</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>twickenham stadium</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Stadium</descriptor>
+	<text>stoop memorial ground</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>roberto clemente</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>kareem abdul-jabbar</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>jimmy connors</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>michael jordan</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>wayne gretzky</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>wilt chanberlain</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>sugar ray robinson</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>mickey mantle</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>lawrence taylor</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>willie shoemaker</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>walter johnson</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>deion sanders</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>henry armstrong</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>roger hornsby</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>hortencia marcari</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>marques haynes</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>raymond jean bourque</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>francis charles brimsek</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>andrew james bathgate</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>robert theodore bauer</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>gerald michael cheevers</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>yvan serge cournoyer</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>alexander peter delvecchio</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>woodrow clarence dumart</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>william ronald durnan</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>william alaxander gadsby</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>ebenezer ralston goodfellow</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>joseph jacques hughes laperriere</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Athlete</descriptor>
+	<text>hubert george quackenbush</text>
+ </phrase>
+</Sports>

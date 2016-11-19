@@ -1,0 +1,16 @@
+
+TouchMe Games(TMG) Is copyright under Andy Grebe a.k.a. tecknophreak(tecknophreak@gmail.com)
+TMG is released under GPL v2
+
+This is the README for touchmegames.
+
+For installation, it's the usual make, make install.
+More detailed directions are in Install.
+
+Gtk+ 2.4.0+ is required for making the project.
+A few games require ALSA for sound, if you don't have it, no
+problem.
+
+This project has only been tested on RedHat 9, RHEL 4 and FC 2, 4, 7, 8 at the moment.
+I'm fairly certain that this will install and run on just about any Linux
+with a 2.6 kernel.

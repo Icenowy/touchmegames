@@ -1,0 +1,4 @@
+
+When creating diffs in the images, you cannot have diffs which cross 
+over the same ys.  That can be put in the other image, just not both
+in the same image.

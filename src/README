@@ -1,0 +1,17 @@
+
+You need to have GTK+ 2.4+ and ALSA installed.
+
+Installation:
+
+Install Dir - You can
+
+Just a plain old make, make install.  Nothing fancy here.  
+
+By default, the project files go into /usr/local/share/touchmegames.  However,
+as of 0.2.2, the files go into where INSTALL_DIR points to in lib/config.h.
+
+The binary goes into /usr/bin.
+
+That's all for now! - TecknoPhreak
+
+Questions/Comments/Bugs - send to tecknophreak@gmail.com

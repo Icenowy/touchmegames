@@ -1,0 +1,587 @@
+
+0.2.5
+
+Overall:
+
+Added a quit button on the main screen, so users can exit this
+application if they are fullscreen and need to exit.
+
+
+Memory:
+Added this new game.  Just like the old card game match
+up the cards by flipping two over at a time.  The time to look
+at the cards in each round decreases, making each round
+a little harder.
+
+--------------------------------------------------------------
+
+0.2.4
+
+Overall:
+
+Removed the Windows dos prompt when starting.
+Cannot resize window.  The code doesn't allow for this, so don't
+let the user do so.
+
+
+Compile4:
+
+Fixed bug 2041551, dealing with scoring.
+
+
+DropZone:
+
+Fixed a bug where the game would end before time ran out.
+Changed the gameplay so that the player doesn't have to wait
+for the blinking to end before dropping the next disk.
+
+
+FortressCrackers:
+
+New Game.  Remove cards consecutively from the board for bonuses.
+
+
+NonoGram:
+
+Fixed bug 2041570, where the full solution is not shown when the 
+game is over.
+
+
+Sudoku:
+
+Fixed bug 2075965, where the player can win, even when there are errors.
+
+
+ThreesCompany:
+
+Fixed bug 2046271, where the cards would come out in numerical order.
+
+
+TriTowers:
+
+Fixed the size of the font on the top score line.  This wasn't
+completely showing before.
+Fixed bug 2054616, where the cards would come out in numerical order.
+
+--------------------------------------------------------------
+
+0.2.3
+
+Overall:
+
+When entering a name through the keyboard, it no longer beeps.
+Have a Windows download now.
+Removed a few bugs which might have lead to possible seg faults.
+
+
+NonoGram:
+
+New Game.  Kind of a paint-by-numbers game.
+
+
+WordHunt:
+
+Added a few new lists.
+
+
+
+--------------------------------------------------------------
+
+0.2.2
+
+Overall:
+
+Install process will now install where you wish.
+
+
+DropZone:
+
+Added a pause button.
+
+
+FotoSeek:
+
+New game.  This is where you look for differences between two
+images on the left and right.  This one will need more images
+as there are only 10 or so in there.
+
+
+ThreesCompany:
+
+Updated graphics.
+
+
+--------------------------------------------------------------
+
+0.2.1
+
+Overall:
+
+Added touchmegames.desktop to the install.  This will allow
+at least KDE to add touchmegames under the games menu.
+
+Added a few more constraints to the Makefiles since TMG was
+getting many segfaults.  Now checks are done to make sure
+the GTK+ functions are not depreciated and are multi-thread
+safe.
+
+Starting to make configurable variables, for example, the
+install directory, screen size, fullscreen, etc.
+
+DropZone:
+
+New game, similar to frozenbubble.
+
+
+VideoPoker:
+Updated Graphics.
+
+
+--------------------------------------------------------------
+
+0.2.0
+
+Overall:
+
+As graphics upgrades occur for each game, they now call
+the new graphical quit dialog.
+
+The pthreads which were used for tmgwave has been changed to
+gthreads.  This seems to have cleared up a lot of issues
+with seg fauilts.  There still remains a bug when quitting,
+now and again.
+
+Compile4:
+The score background and checkers are now completely off the screen.
+
+FoxyBox:
+Upgraded graphics.
+Added commas to scores plus other minor upgrades.
+
+GorillaThrilla:
+Updated graphics.
+Added commas to scores plus other minor upgrades.
+
+Sudoku:
+Fixed a bug, where if you clicked on a blank tile before anything
+else, you'd get an X.
+
+TriTowers:
+Cards are now installed, as the cards it was looking for aren't
+always installed on newer distros.
+
+
+--------------------------------------------------------------
+
+0.1.9
+
+Compile4:
+
+Updated graphics.
+
+
+Sudoku:
+
+If you click on a prefilled number, that will be the current
+selected number.
+
+If you click on a non-prefilled number, it will be overwritten.
+
+
+Tritowers:
+
+Updated graphics.
+
+
+--------------------------------------------------------------
+
+0.1.8
+
+Overall:
+
+Added a new sound library, TmgWave, this starts another thread
+and uses the ALSA API to play wave files.
+
+Added new graphics in a few places, MUCH better!
+
+
+Wordhunt:
+New Graphics
+
+Lists now can only be loaded once per three rounds.
+
+Fixed a few of the selection bugs.
+
+Added a sound when a correct word is selected.
+
+Added a few new lists.
+
+The lists are now in XML format.
+
+
+Sudoku:
+New Game(Includes the new graphical format).
+
+
+--------------------------------------------------------------
+
+0.1.7a
+
+Overall:
+
+Between gtk+ versions 2.6.8 and 2.6.12, the GtkFixed widget
+required the gtk_fixed_set_has_window in order to keep
+it's images behind it.  So FC5+ and others with 2.6.12(or 10
+possibly) showed the whole image for the altprogressbar on the 
+screen, even though it was placed below 0 in the fixed widget.
+
+
+--------------------------------------------------------------
+
+0.1.7
+
+Overall:
+
+The keypad now accepts keyboard input as well as the mouse/touchscreen.
+
+GamePtr:
+Added a addCommas function.  Now integers can be read a little easier
+on the top 10 lists.
+
+
+FoxyBoxy:
+Added a pause button, so now you can pause the game when someone
+wants to talk to you.
+
+Fixed the Removed Lines label so you can see the full words.
+
+
+Consume21:
+Added this new game.
+
+TriTowers:
+The images for the bonuses now reflect the actual bonus value.
+
+
+
+--------------------------------------------------------------
+
+0.1.6
+
+Overall:
+
+Moved makefile to Makefile.
+
+Started to convert tabs from tab to 4 spaces.
+
+Changed serial I/O for the dartboard to USB.
+
+Added a debug option to the makefiles, to find those
+pesky little seg faults
+
+Added the version to the about page.
+
+Fixed a username/directory error in gameptr which used the 
+environment HOME, instead of getuid/getpwuid.
+
+SecretPhrase:
+Commas are now ok in the phrases, was missing a line of code.
+
+
+
+--------------------------------------------------------------
+
+0.1.5
+
+Overall:
+
+Modded some of the about.
+
+SecretPhrase:
+New game played like Wheel of Fortune.
+
+Compile4:
+Got new checkers with a TMG on them.
+
+
+--------------------------------------------------------------
+
+0.1.4
+
+Overall:
+
+Just foxyboxy(a tetris variant).
+
+foxyboxy:
+Read above.
+
+
+
+--------------------------------------------------------------
+
+0.1.3
+
+Overall:
+
+Created a few better images for the menus and the games.
+
+compile4:
+
+New game!!  It's a connect4 game, but I'm a nerd/geek coder
+guy, so compile seems fun.  Based off the AI from Kwin4.
+
+
+--------------------------------------------------------------
+
+0.1.2
+
+Overall:
+
+Redesign of the menus, I ran out of space on the one screen,
+so the games are now categorized.
+
+Created an about page for more information on developers and
+helpers.
+
+
+gorillathrilla:
+
+Got new barrels, much nicer looking.
+
+
+wordhunt:
+
+Fixed a bug where the rounds don't update properly, causing
+skipped rounds.  Thanks to Farhan Kalsekar for finding it.
+
+Added a new list, European countries.
+
+
+--------------------------------------------------------------
+
+0.1.1
+
+Overall:
+
+A compile error in gameptr fixed, had a GAME_PTR:: in the header.
+
+
+dartcricket:
+
+Added a new dart game, dartcricket.  You know it, you love it.
+
+
+tritowers:
+
+Added the tritowers game.  This one's pretty good, mostly just a
+port from old code into the touchmegames format.  I will be
+looking for a graphics person to place a background in there.
+
+
+--------------------------------------------------------------
+
+0.1.0
+
+Overall:
+
+This release changes the game from pre-alpha to alpha status.
+
+flogthedolphin, gorillathrilla, threescompany, videopoker,
+and wordhunt all now have individual installs.
+
+
+wordhunt:
+
+Added a new list, Sienfeld.
+
+
+--------------------------------------------------------------
+
+0.0.9
+
+gorillathrilla:
+
+A GtkWidget was being destroyed when it never was created
+before that point, resulting in a seg fault.
+
+
+threescompany:
+
+A function was being called without sending the correct 
+variable, resulting in a seg fault once in a while.
+
+Added the new set of cards to the game, giving it a better look.
+
+
+videopoker:
+
+Added the new set of cards to the game, giving it a better look.
+
+
+wordhunt:
+
+Added a new list.
+
+Fixed a bug where the "found" letters were not in the correct
+position.
+
+
+--------------------------------------------------------------
+
+0.0.8
+
+Overall:
+
+Added a README and Install file at the toplevel.
+
+Added exit button to all games but the dart games.
+
+Removed all warnings during compile.
+
+
+dart01:
+
+Added a menu to the dart01, which will later go onto the other
+dart games.  This menu has an exit game, missed dart and remove
+last dart button.
+
+
+threescompany:
+If the card mask was shown, and a user pressed take score,
+the card mask would still show.
+
+Take score is now more like a button.
+
+If the user has no points, it wasn't initialized.
+
+Decreased timer from 3 minutes to 2 minutes, much harder.
+
+
+wordhunt:
+Added another list to the list of lists, Olympic Sports
+
+List for round 4 doesn't show up.
+
+If a word has been found, and the user selects a letter then
+unselects the letter, it goes back to being a "found" letter.
+
+--------------------------------------------------------------
+
+0.0.7
+
+Overall:
+
+dartcountdown:
+
+Added this game which is a timed 301 for one player.
+
+
+threescompany:
+
+Added this new card game.
+
+
+wordhunt:
+
+The first word list shows up when you startup giving a chance to look 
+for the words.
+
+Added a new list, months.
+
+--------------------------------------------------------------
+
+
+0.0.6
+
+Overall:
+Created a ? button next to the play button which will give instructions.
+Some do have the help screen, some don't.
+
+dart01:
+
+Low ton, high ton and max ton all appear, with animations, woohoo!
+
+
+darttictactoe:
+
+The current player's X/O box is highlighted to tell which player
+is currently up.
+
+Fixed a little bug where XXO can win the game for O.
+
+Changed the graphic for it.
+
+
+dartlowball:
+
+Added dartlowball.  This is a game where you try to get the fewest points
+possible.
+
+
+wordhunt:
+
+Changed a bug where a word can write over a char in another word
+when it's being placed in backwards.
+
+Needs to has something between rounds, need to add it to the beginning.
+
+If one circle is selected and no other, you can now just click on it.
+
+--------------------------------------------------------------
+
+0.0.5
+
+dart01:
+
+Added points and rounds to the gameOver screen.
+
+videopoker:
+
+Can now check straights - Thanks Mike!
+
+wordhunt:
+
+Added this new game called wordhunt.  Guess what, you hunt for words!!
+
+--------------------------------------------------------------
+
+
+0.0.4
+
+Overall:
+
+Added DartCountUp and darttictactoe to the games.
+
+When a game is done, the preview box is updated to reflect
+any new high scores.
+
+Games can now have different types of saved scores
+	-Currently INTEGER and FLOAT
+
+flogthedolphin:
+
+Added a button to turn sound on and off.
+
+--------------------------------------------------------------
+
+
+0.0.3
+
+Added Dart01 to the games.
+Spiffed up the game selection screen.
+	-Added a darker background color
+	-When a game is clicked on, it is highlighted and 
+		the current high scores are shown on the right
+
+Modifications to flogthedolphin which allows it to get that final
+score and added a new sound.
+
+Added dart01 which allows users to play 101, 201, 301, ..., 901.  However,
+I need to show people how to take a Helix board and convert it so it
+can send data to the PC.
+
+Added a background color function to the games so that the main class will
+then change the background before loading the new game.
+
+Added a game type function to the games so that they can later be 
+catagorized when there are a few games

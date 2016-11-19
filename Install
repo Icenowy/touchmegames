@@ -1,0 +1,22 @@
+
+Installation:
+
+To install the full package:
+
+   1. Untar the source - tar -zxvf touchmegames-x.x.x.tar.gz, 
+       where the x.x.x is the current version
+   2. Change directory into the source directory - cd touchmegames/src.
+   3. Make the binaries - make
+   4. Install the binaries and other files - make install
+   5. Play - touchmegames
+
+To install individual games:
+
+   1.  Unar the source - tar -zxvf touchmegames-x.x.x.tar.gz, where 
+        the x.x.x is the current version
+   2.  Change directory into the source directory of the game you wish 
+        to install, example gorillathrilla - 
+	cd touchmegames/src/gorillathrilla.
+   3.  Make the game - make game
+   4.  Install the binary and other files - make install
+   5.  Play - gorillathrilla

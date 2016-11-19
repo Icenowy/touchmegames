@@ -1,0 +1,456 @@
+<Music>
+
+<descriptortype>Album</descriptortype>
+<descriptortype>Artist</descriptortype>
+<descriptortype>Song</descriptortype>
+<descriptortype>Event</descriptortype>
+
+<entries>89</entries>
+ <phrase>
+  <descriptor>Album</descriptor>
+  <text>Taking The Long Way</text>
+ </phrase>
+ 
+ <phrase>
+  <descriptor>Album</descriptor>
+  <text>Highway Companion</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Group</descriptor>
+	 <text>Creedence Clearwater Revival</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>The River in Reverse</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Artist</descriptor>
+	 <text>Carrie Underwood</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Artist</descriptor>
+	 <text>Christina Aguilera</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>Confessions on a Dance Floor</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>American Idiot</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>Speak for Yourself</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>Bolton Swings Sinatra</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>Underage Thinking</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>The Immaculate Collection</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>Lonely Runs Both Ways</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Artist</descriptor>
+	 <text>The Rolling Stones</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>Brian Stokes Mitchell</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>Don't Look Back</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>Always outnumbered, never outgunned</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>music for the Jilted Generation</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>The Dirtchamber Sessions</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>Baby's Got a Temper</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>Pandemonium</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Group</descriptor>
+	 <text>Rage Against The Machine</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>The Battle of Los Angeles</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>Year Of tha Boomerang</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>People Of The Sun</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>Bullet in the Head</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>Settle For Nothing</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>Take The Power Back</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>Hedda Be Playing On The Jukebox</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>Microphone Fiend</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>The Ghost Of Tom Joad</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>Street Fighting Man</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>Serial Thrilla</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>You'll Be Under My Wheels</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>Music For The Jilted Generation</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>Break And Enter</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Album</descriptor>
+	 <text>Dig Your Own Hole</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>Block Rockin' Beats</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>Don't Stop The Rock</text>
+ </phrase>
+ 
+ <phrase>
+	 <descriptor>Song</descriptor>
+	 <text>The Private Psychedelic Reel</text>
+ </phrase>
+ 
+ 
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>Keep Hope Alive</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>She's My Pusher</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>Spaced Invader</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>Check The Skillz</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>Smells Link Teen Spirit</text>
+ </phrase>
+
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>Smells Like Teen Spirit</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Album</descriptor>
+	<text>Enema of the State</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Album</descriptor>
+	<text>You've Come A Long Way, Baby</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>build it up - tear it down</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>Gangster Tripping</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>the rockafeller skank</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>you're not from brighton</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>six million ways to live</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Album</descriptor>
+	<text>better living through chemistry</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Album</descriptor>
+	<text>halfway between the gutter and the stars</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Artist</descriptor>
+	<text>red hot chili peppers</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Album</descriptor>
+	<text>californication</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>Around the world</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>somewhere i belong</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>breaking the habit</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>points of authority</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>a place for my head</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>pushing me away</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Artist</descriptor>
+	<text>limp bizkit</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>calm like a bomb</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>born of a broken man</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>voice of the voiceless</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>new millennium homes</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>war within a breath</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>battlestar scralatchtica</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Album</descriptor>
+	<text>the battle of los angeles</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>midnight train to memphis</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>what i learned out on the road</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>grown man business</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>champion requiem</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>boogie man song</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>jackson mississippi</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>feel like makin' love</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>southwest voodoo</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>house of horrors</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Album</descriptor>
+	<text>whitey ford sings the blues</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Album</descriptor>
+	<text>a crow left of the murder</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Artist</descriptor>
+	<text>insane clown posse</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Album</descriptor>
+	<text>three dollar bill y'all</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Album</descriptor>
+	<text>sound of white noise</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>nobody love's me</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>underneath the gun</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>head for the barricade</text>
+ </phrase>
+
+ <phrase>
+	<descriptor>Song</descriptor>
+	<text>behind blue eyes</text>
+ </phrase>
+</Music>

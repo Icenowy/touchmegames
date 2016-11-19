@@ -1,0 +1,27 @@
+Coding Standards for TMG:
+
+1.  Struct/Class Names
+
+Structures and Class names should all start with a capital
+letter, followed by lower letters.  If the name is made of
+more than one word, the first letter of the second word
+should also be made capital.  I.E.  ExampleClass.
+
+
+2.  Variable Names
+
+Variable names are the same as the class/struct names, except
+the first letter is lower cased.  I.E. exampleVariable.
+
+
+3.  Brackets for Conditional and Loop Statements
+
+All conditional and loop statements get brackets, even if
+they surround one line.  The opening bracket goes on the same line
+as the statement.  The closing bracket goes in the same column
+as the beginning of the statement.  I.E.
+
+if (this is a statement) {
+    this is the code;
+}
+

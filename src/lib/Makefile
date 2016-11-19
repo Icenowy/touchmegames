@@ -16,9 +16,11 @@ debug:
 	g++ keypad.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 	g++ tmgdir.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 	g++ tmgglist.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
+	g++ tmgimage.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
+	g++ tmgtogglebutton.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS)
 	g++ altprogressbar.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS) -Wall
 	g++ tmgwave.cpp -c -g $(INC) $(GTK_CFLAGS) $(GENERAL_CFLAGS) -Wall
-	ar crv libgameptr.a gameptr.o keypad.o altprogressbar.o tmgdir.o tmgglist.o tmgwave.o tmgimage.o
+	ar crv libgameptr.a gameptr.o keypad.o altprogressbar.o tmgdir.o tmgglist.o tmgwave.o tmgtogglebutton.o tmgimage.o
 	ranlib libgameptr.a
 
 gameptr.a: gameptr.o keypad.o altprogressbar.o tmgdir.o tmgglist.o tmgglist.o tmgwave.o tmgtogglebutton.o tmgimage.o
